@@ -60,7 +60,7 @@ const FormField = ({ field }) => {
 
   // Render custom component if provided in schema
   if (CustomComponent) {
-    return <CustomComponent {...rest} register={register} errors={errors} setValue={setValue} validationProps={validationProps} />;
+    return <CustomComponent {...rest} register={register} errors={errors} setValue={setValue} formState={formState} watch={watch} validationProps={validationProps} />;
   }
 
   const formValues = watch();
